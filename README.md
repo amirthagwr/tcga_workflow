@@ -34,6 +34,7 @@ time_plot(metadata = select_data,
           condition = vital_status,
           mytitle = "DSS time")
 ```
+## 3. Statistical Test 
 
 **tcga_test** is a non-parametric test comparing two groups of patients and returns the p-value of significance. 
 ```
