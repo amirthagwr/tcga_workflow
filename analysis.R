@@ -15,17 +15,32 @@ cancer_types <- c("OV", "UCEC")
 select_data <- tcga_data_F_QC[which(tcga_data_F_QC$type %in% cancer_types ),]
 
 #mybarplot function from source box_plot_tcga.R
-boxplot_tcga(metadata = select_data, 
+g<- boxplot_tcga(metadata = select_data, 
           metadata_col = age_at_initial_pathologic_diagnosis,
           condition = tumor_status,
           mytitle = "Age at Pathological Diagnosis",
           ylab = "Age" ,
           xlab = "Tumor Status")
 
-time_plot(metadata = select_data, 
+ggsave(plot = g, 
+       filename = "age_tumor_status.pdf",
+       width = 5,
+       height = 5,
+       units = "in",
+       dpi = "retina")
+
+
+p<-time_plot(metadata = select_data, 
           time_col = DSS.time, 
           condition = vital_status,
           mytitle = "DSS time")
+
+ggsave(plot = p, 
+       filename = "DSS.time_vital.pdf",
+       width = 5,
+       height = 5,
+       units = "in",
+       dpi = "retina")
 
 tcga.test(metadata = select_data, 
           metadata_col = "DSS.time", 
