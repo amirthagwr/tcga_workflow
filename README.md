@@ -15,7 +15,7 @@ Selecting the cancer types and in this example, tested for "OV" and "UCEC"
 analysis.R
 
 
-**boxplot_tcga**  is the function to create a boxplot to comapre a specific meta data column for the specific group of patients (OV and UCEC) for 
+**boxplot_tcga**  is the function to create a boxplot to compare a specific meta data column for the specific group of patients (OV and UCEC) for 
 age at pathological diagnosis and tumor status
  
  ```
