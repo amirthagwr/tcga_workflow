@@ -42,7 +42,7 @@ ggsave(plot = p,
        units = "in",
        dpi = "retina")
 
-tcga.test(metadata = select_data, 
+tcga_test(metadata = select_data, 
           metadata_col = "DSS.time", 
           condition = "tumor_status")
 
