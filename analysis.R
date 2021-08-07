@@ -14,7 +14,7 @@ library(data.table)
 cancer_types <- c("OV", "UCEC")
 select_data <- tcga_data_F_QC[which(tcga_data_F_QC$type %in% cancer_types ),]
 
-#mybarplot function from source box_plot_tcga.R
+#boxplot function from source box_plot_tcga.R
 g<- boxplot_tcga(metadata = select_data, 
           metadata_col = age_at_initial_pathologic_diagnosis,
           condition = tumor_status,
@@ -29,7 +29,7 @@ ggsave(plot = g,
        units = "in",
        dpi = "retina")
 
-
+#timeplot is to show a disease specific survival event
 p<-time_plot(metadata = select_data, 
           time_col = DSS.time, 
           condition = vital_status,
@@ -42,7 +42,10 @@ ggsave(plot = p,
        units = "in",
        dpi = "retina")
 
-tcga_test(metadata = select_data, 
+
+#testing the two conditions using a non parametric test wilcox rank sum test
+
+tcga.test(metadata = select_data, 
           metadata_col = "DSS.time", 
           condition = "tumor_status")
 
