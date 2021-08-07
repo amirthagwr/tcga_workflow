@@ -5,9 +5,9 @@ R workflow to explore the TCGA metadata for specific condition
 To create a box plot of a metadata columns such as age at diagnosis, gender, race, for a specific condition such as
 Tumor status and vital status of specific patient groups
 
-# # 1. Load your data # #
+## 1. Load your data ##
 
-To load the data and filter the missing values 
+To load the data and filter the missing values, source the R script 
 **load_data_prefiltering.R**
 
 ## 2. Create a boxplot 
