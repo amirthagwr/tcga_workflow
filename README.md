@@ -1,4 +1,4 @@
-# tcga_workflow
+# TCGA metadata workflow
 
 R workflow to explore the TCGA metadata for specific condition
 
