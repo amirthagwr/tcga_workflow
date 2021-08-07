@@ -17,7 +17,7 @@ time_plot <- function(metadata, time_col, condition, mytitle){
     ggtitle(mytitle) 
 }
 
-tcga.test <- function(metadata = select_data, 
+tcga_test <- function(metadata = select_data, 
                       metadata_col = "DSS.time",
                       condition = "tumor_status"){
   #non parametric tests for metadata with selected groups
