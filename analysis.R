@@ -29,11 +29,29 @@ ggsave(plot = g,
        units = "in",
        dpi = "retina")
 
+
+
 #timeplot is to show a disease specific survival event
 p<-time_plot(metadata = select_data, 
           time_col = DSS.time, 
           condition = vital_status,
           mytitle = "DSS time")
+
+q <- time_plot(metadata = select_data,
+               time_col = DFI.time,
+               condition=histological_grade,
+               mytitle = "DFI. time"
+               )
+
+print(q)
+
+ggsave(plot = q, 
+       filename = "DFI.time_grade.pdf",
+       width = 5,
+       height = 5,
+       units = "in",
+       dpi = "retina")
+
 
 ggsave(plot = p, 
        filename = "DSS.time_vital.pdf",

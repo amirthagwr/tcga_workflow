@@ -41,7 +41,7 @@ time_plot <- function(metadata, time_col, condition, mytitle){
     stopifnot(is.data.frame(metadata))
   ggplot2::ggplot(data=metadata, aes(x= {{condition}}, y= {{time_col}}, fill={{condition}}) ) +
     geom_boxplot( show.legend =F) +
-    scale_fill_manual(values=c("orange", "red")) +
+    scale_fill_brewer(palette="Dark2") +
     ggtitle(mytitle) 
 }
 

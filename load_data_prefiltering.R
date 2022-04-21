@@ -48,3 +48,4 @@ tcga_data_F_QC <- droplevels(tcga_data_F[!(is.na(tcga_data_F$type)|
 
 colnames(tcga_data_F_QC)
 str(tcga_data_F_QC)
+
