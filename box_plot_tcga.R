@@ -1,6 +1,6 @@
 
 
-Authors@R: person("Amirtha", email = "amirtha.bifs@gmail.com",
+Authors@R: person("Amirtha", email = "amirtha.bioinfo@gmail.com",
                   role = "aut")
 numeric_version("1.0.0") 
 
